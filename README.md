@@ -16,21 +16,22 @@ main.go自体は
 
 `deploy.sh`を編集する。
 - 関数名`golmd0`のところ
-- profile`erai`のところ(`erai`はAdministratorAccessの「普段遣いするのは危険なプロファイル)
 - region
+- profile`erai`のところ(`erai`はAdministratorAccessの「普段遣いするのは危険な」プロファイル)
 
 同様に`invoke_lambda.sh`を編集する。
 - 関数名`golmd0`のところ
-- profile`erai`のところ
 - region
+- profile`erai`のところ
 
 `./deploy.sh`実行 (upx使ってるので、インストールするなり、コメントアウトしてください)
 
 `./invoke_lambda.sh`実行。
-(invocation-type RequestResponseなので、結果が帰ってくる。大量に実行する場合はEventにしてCloudWatchから取る)
+(invocation-type RequestResponseなので、結果が帰ってくる。
+大量に実行する場合はEventにしてCloudWatchから取る)
 
 
 # TODO
 
 lamdaを作るところから、cliでできないか。
-(IAMのところがむずかしい)
+(IAM roleのところがむずかしい)
