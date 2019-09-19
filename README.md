@@ -4,7 +4,9 @@ golangでAWS Lambdaを書くテンプレート。
 
 main.go自体は
 [Go の AWS Lambda 関数ハンドラー - AWS Lambda](https://docs.aws.amazon.com/ja_jp/lambda/latest/dg/go-programming-model-handler-types.html)
-にあるやつを、ちょっとだけ変えたもの。
+にあるやつを、ちょっとだけ変えたもので、
+`{"name":"Dolly"}`みたいなJSONをeventで受け取って、
+`{"Answer:":"Hello Dolly!"}`のようなレスポンスを返すもの。
 
 
 # 手順
@@ -12,7 +14,7 @@ main.go自体は
 このレポジトリをcloneするか、[ghq](https://github.com/motemen/ghq)で取る。
 
 [AWS lambda](https://ap-northeast-1.console.aws.amazon.com/lambda/home)で関数を作成する。
-ハンドラが`hello`になるので`main`に変更する。
+ハンドラ名が`hello`になるので`main`に変更する。
 
 `deploy.sh`を編集する。
 - 関数名`golmd0`のところ
@@ -33,5 +35,5 @@ main.go自体は
 
 # TODO
 
-lamdaを作るところから、cliでできないか。
+lamdaを作るところから、CLIでできないか考える。
 (IAM roleのところがむずかしい)
