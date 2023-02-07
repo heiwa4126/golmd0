@@ -1,5 +1,5 @@
 module github.com/heiwa4126/golmd1
 
-go 1.13
+go 1.20
 
-require github.com/aws/aws-lambda-go v1.13.2
+require github.com/aws/aws-lambda-go v1.37.0

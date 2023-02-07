@@ -1,5 +1,5 @@
 #!/bin/sh
-GOOS=linux GOARCH=amd64 go build -o main -ldflags="-w -s"
+GOOS=linux GOARCH=amd64 go build -o main -trimpath -ldflags="-w -s"
 upx main
 
 zip -r /tmp/golmd0.zip main
